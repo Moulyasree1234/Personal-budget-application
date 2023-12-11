@@ -134,6 +134,33 @@ const DashboardPage = () => {
                   ]}
                 />
               </Grid>
+              <Grid item xs={6} sx={{ marginLeft: "10vw" }}>
+                <PieChart
+                  series={[
+                    {
+                      data: [
+                        { id: 0, value: 10, label: 'Travel' },
+                        { id: 1, value: 15, label: 'Entertainment' },
+                        { id: 2, value: 20, label: 'Education' },
+                      ],
+                    },
+                  ]}
+                  width={400}
+                  height={200}
+                />
+              </Grid>
+              <Grid item xs={6} sx={{ marginLeft: "10vw" }}>
+                <LineChart
+                  xAxis={[{ data: [1, 2, 3, 5, 8, 10] }]}
+                  series={[
+                    {
+                      data: [2, 5.5, 2, 8.5, 1.5, 5],
+                    },
+                  ]}
+                  width={500}
+                  height={300}
+                />
+              </Grid>
             </>
           )}
       </Grid>

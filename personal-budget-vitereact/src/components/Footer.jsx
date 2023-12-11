@@ -7,7 +7,7 @@ function Footer() {
       <Box bgcolor="primary.main" color="white" p={2} textAlign="center">
         <Container>
           <Typography variant="body2">
-            All rights reserved &copy; Swetha Chintala  {new Date().getFullYear()}
+            All rights reserved &copy; Moulyasree Madamanchi  {new Date().getFullYear()}
           </Typography>
         </Container>
       </Box>

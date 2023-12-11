@@ -171,7 +171,7 @@ export default function Expenses() {
     },
     {
       field: "month",
-      headerName: "month",
+      headerName: "month (yyyy-mm-dd)",
       type: "string",
       width: 200,
       editable: true,
