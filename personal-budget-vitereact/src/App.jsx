@@ -98,7 +98,7 @@ function App() {
     // Handle user choosing to stay logged in
     try {
       // Implement any necessary actions to refresh the token or extend the session
-      const response = await fetch("http://127.0.0.1:3000/users/refreshToken", {
+      const response = await fetch("http://54.226.243.159:3000/users/refreshToken", {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
       });
