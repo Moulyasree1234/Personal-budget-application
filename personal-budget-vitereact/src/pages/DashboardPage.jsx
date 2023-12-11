@@ -3,7 +3,7 @@ import { Box, Grid } from "@mui/material";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-import { BarChart } from "@mui/x-charts";
+import { BarChart, LineChart, PieChart } from "@mui/x-charts";
 
 const DashboardPage = () => {
   const [monthlyBudget, setMonthlyBudget] = useState();
