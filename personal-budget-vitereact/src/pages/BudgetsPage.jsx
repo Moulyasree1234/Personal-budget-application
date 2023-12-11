@@ -107,7 +107,7 @@ export default function BudgetsPage() {
       const updatedRow = { ...newRow };
       delete updatedRow.isNew;
 
-      fetch("http://54.226.243.159:3000/expenses/", {
+      fetch("http://54.226.243.159:3000/budgets/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -128,7 +128,7 @@ export default function BudgetsPage() {
       const updatedRow = { ...newRow };
       console.log(updatedRow);
 
-      fetch(`http://54.226.243.159:3000/expenses/${newRow._id}`, {
+      fetch(`http://54.226.243.159:3000/budgets/${newRow._id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
