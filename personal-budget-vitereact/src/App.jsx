@@ -75,7 +75,7 @@ function App() {
     let timer;
 
     if (token) {
-      const expirationTime = new Date().getTime() + 3600000; 
+      const expirationTime = new Date().getTime() + 60000; 
       const remaining = expirationTime - new Date().getTime();
       console.log(expirationTime, new Date().getTime(), remaining);
       setRemainingTime(remaining);
