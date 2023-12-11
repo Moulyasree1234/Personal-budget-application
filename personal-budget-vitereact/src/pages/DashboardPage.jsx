@@ -3,7 +3,7 @@ import { Box, Grid } from "@mui/material";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-import { BarChart, LineChart, PieChart } from "@mui/x-charts";
+import { BarChart, PieChart, LineChart } from "@mui/x-charts";
 
 const DashboardPage = () => {
   const [monthlyBudget, setMonthlyBudget] = useState();
@@ -136,30 +136,26 @@ const DashboardPage = () => {
               </Grid>
               <Grid item xs={6} sx={{ marginLeft: "10vw" }}>
                 <PieChart
-                  series={[
-                    {
-                      data: [
-                        { id: 0, value: 10, label: 'Travel' },
-                        { id: 1, value: 15, label: 'Entertainment' },
-                        { id: 2, value: 20, label: 'Education' },
-                      ],
-                    },
-                  ]}
                   width={400}
                   height={200}
+                  series={[{ data: [
+                    {id: 0, value: 250, label: "Travel"},
+                    {id: 1, value: 450, label: "Education"},
+                    {id: 2, value: 350, label: "Entertainment"}]
+                  }]}
                 />
               </Grid>
-              <Grid item xs={6} sx={{ marginLeft: "10vw" }}>
-                <LineChart
+              <Grid item xs={6} sx={{ marginBottom: "10vh" }}>
+              <LineChart
                   xAxis={[{ data: [1, 2, 3, 5, 8, 10] }]}
                   series={[
                     {
                       data: [2, 5.5, 2, 8.5, 1.5, 5],
                     },
                   ]}
-                  width={500}
-                  height={300}
-                />
+                  width={400}
+                  height={200}
+                />
               </Grid>
             </>
           )}
