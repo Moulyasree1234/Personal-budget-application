@@ -393,13 +393,15 @@ div.menu ul li a:hover  {
 }
 
 div.hero {
-  height: 60vh;
+  height: 50vh;
   background-color: #f8c8f0;
   background-image: url('./assets/bg.png');
-  background-size: 45vh;
+  background-size: 43vh;
+  background: image width 80px;
   background-repeat: no-repeat;
   background-position: center bottom;
   padding-top: 33px;
+  padding-bottom:30px ;
 }
 
 div.hero h1,
