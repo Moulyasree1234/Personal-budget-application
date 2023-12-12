@@ -364,7 +364,7 @@ body {
 
 div.menu {
   width: 100%;
-  background-color:violet;
+  background-color: #4d5791;
   height: 44px;
   padding: 0 40px;
 }
@@ -394,9 +394,9 @@ div.menu ul li a:hover  {
 
 div.hero {
   height: 60vh;
-  background-color: #969fb3;
+  background-color: #f8c8f0;
   background-image: url('./assets/bg.png');
-  background-size: 60vh;
+  background-size: 50vh;
   background-repeat: no-repeat;
   background-position: center bottom;
   padding-top: 33px;
@@ -415,7 +415,7 @@ div.hero h1 {
 }
 
 div.hero h2 {
-  color:violet;
+  color: #4d5791;
 }
 
 @media screen and (min-width: 768px) {

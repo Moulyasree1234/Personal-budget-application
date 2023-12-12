@@ -3,7 +3,7 @@
 import { rest } from 'msw';
 
 const handlers = [
-  rest.get('http://localhost:3000/users/getUserDetails', (req, res, ctx) => {
+  rest.get('http://54.226.243.159:3000/users/getUserDetails', (req, res, ctx) => {
     return res(
       ctx.json({
         budgets: [

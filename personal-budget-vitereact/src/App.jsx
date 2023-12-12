@@ -22,22 +22,22 @@ import Button from "@mui/material/Button";
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#5E35B1', // Deep Purple
+      main: '#E6969A', 
     },
     secondary: {
-      main: '#FFC107', // Amber
+      main: '#FFC107',
     },
     error: {
-      main: '#D32F2F', // Dark Red
+      main: '#E65B10', 
     },
     success: {
-      main: '#43A047', // Green
+      main: '#43A047', 
     },
     info: {
-      main: '#1976D2', // Blue
+      main: '#1976D2', 
     },
     warning: {
-      main: '#FF9800', // Orange
+      main: '#FF9800', 
     },
   },
   typography: {
@@ -96,23 +96,24 @@ function App() {
 
   const handleStayLoggedIn = async () => {
     // Handle user choosing to stay logged in
-    try {
-      // Implement any necessary actions to refresh the token or extend the session
-      const response = await fetch("http://54.226.243.159:3000/users/refreshToken", {
-        method: "POST",
-        headers: { Authorization: `Bearer ${token}` },
-      });
+    // Implement any necessary actions to refresh the token or extend the session
+    fetch("http://54.226.243:3000/users/refreshToken", {
+      method: "POST",
+      headers: { Authorization: `Bearer ${token}` },
+    }).then((response) => response.json())
+      .then((response) => {
       console.log("response", response);
       const newToken = response.token;
+      console.log("newToken", newToken);
       localStorage.setItem("token", newToken);
       setShowDialog(false);
       console.log("Token refreshed", showDialog);
-    } catch (err) {
+    }).catch((error) => {
       setShowDialog(false);
       navigate("/login");
       console.log("Error refreshing token:", err);
       alert("Error refreshing token. Redirect to login page", err);
-    }
+    });
   };
 
   const handleLogout = () => {
