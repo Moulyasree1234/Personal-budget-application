@@ -97,7 +97,7 @@ function App() {
   const handleStayLoggedIn = async () => {
     // Handle user choosing to stay logged in
     // Implement any necessary actions to refresh the token or extend the session
-    fetch("http://54.226.243:3000/users/refreshToken", {
+    fetch("http://54.226.243.159:3000/users/refreshToken", {
       method: "POST",
       headers: { Authorization: `Bearer ${token}` },
     }).then((response) => response.json())

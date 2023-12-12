@@ -73,7 +73,7 @@ export default function Budgets() {
   };
 
   const handleDeleteClick = (id) => () => {
-    fetch(`http://54.226.243:3000/budgets/${id}`, {
+    fetch(`http://54.226.243.159:3000/budgets/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -106,7 +106,7 @@ export default function Budgets() {
       const updatedRow = { ...newRow };
       delete updatedRow.isNew;
 
-      fetch("http://54.226.243:3000/budgets/", {
+      fetch("http://54.226.243.159:3000/budgets/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -127,7 +127,7 @@ export default function Budgets() {
       const updatedRow = { ...newRow };
       console.log(updatedRow);
 
-      fetch(`http://54.226.243:3000/budgets/${newRow._id}`, {
+      fetch(`http://54.226.243.159:3000/budgets/${newRow._id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
